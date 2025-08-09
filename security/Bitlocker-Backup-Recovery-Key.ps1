@@ -3,3 +3,7 @@ if ($recoveryKeyProtector) {
 } else {
     Write-Host "No recovery password protector found. You may need to add one first."
 }
+
+# check recovery keys and Bitlocker status
+Get-BitLockerVolume -MountPoint "C:" | Select-Object EncryptionMethod, KeyProtector
+
