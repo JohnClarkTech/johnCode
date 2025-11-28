@@ -26,4 +26,4 @@ services:
       - ./letsencrypt:/etc/letsencrypt
 
 
-docker compose up -d
+# after saving the .yml file run docker compose up -d

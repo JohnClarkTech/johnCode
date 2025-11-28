@@ -1,11 +1,13 @@
-docker volume create n8n_data
-
-docker run -it --rm \
- --name n8n \
- -p 5678:5678 \
- -e GENERIC_TIMEZONE="America/Los_Angeles" \
- -e TZ="America/Los_Angeles" \
- -e N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true \
- -e N8N_RUNNERS_ENABLED=true \
- -v n8n_data:/home/node/.n8n \
- docker.n8n.io/n8nio/n8n
+sudo docker run -d \
+  --name n8n \
+  -p 5678:5678 \
+  -e GENERIC_TIMEZONE="America/Los_Angeles" \
+  -e TZ="America/Los_Angeles" \
+  -e N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true \
+  -e N8N_RUNNERS_ENABLED=true \
+  -e DB_SQLITE_POOL_SIZE=5 \
+  -e N8N_PROTOCOL="http" \
+  -e N8N_EDITOR_BASE_URL="http://n8n.jahn.surf:5678" \
+  -e N8N_SECURE_COOKIE="false" \
+  -v n8n_data:/home/node/.n8n \
+  docker.n8n.io/n8nio/n8n
