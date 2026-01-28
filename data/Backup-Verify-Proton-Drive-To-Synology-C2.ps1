@@ -1,4 +1,4 @@
-# Define the folder to check on
+# Define the folder to check.  Updated on 720s.
 $SourceFolder = "C:\Users\YourName\ProtonDrive\Taxes2025"
 $ReportFile = "$SourceFolder\IntegrityManifest.txt"
 
