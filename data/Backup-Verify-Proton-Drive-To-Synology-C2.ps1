@@ -9,4 +9,4 @@ Get-ChildItem -Path $SourceFolder -Recurse -File |
     Select-Object Hash, Path | 
     Out-File -FilePath $ReportFile
 
-Write-Host "Manifest created at $ReportFile" -ForegroundColor Green
+Write-Host "Manifest created at $ReportFile" -ForegroundColor Green j
