@@ -1,3 +1,9 @@
+260 belt labor
+tensioner
+
+$480 plus tax for both
+
+
 # --- CONFIGURATION ---
 $serverIP   = "10.10.10.9"
 $shareName  = "backups"

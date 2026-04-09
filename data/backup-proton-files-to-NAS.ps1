@@ -43,3 +43,6 @@ foreach ($Task in $Tasks) {
         Write-Warning "Source path not found for $($Task.Name): $($Task.Source)"
     }
 }
+
+
+#  -NoProfile -ExecutionPolicy Bypass -File "C:\Users\john\Github\johnCode\data\backup-proton-files-to-NAS.ps1"

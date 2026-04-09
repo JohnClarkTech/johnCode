@@ -1,0 +1,13 @@
+$response = Invoke-RestMethod -Uri "http://10.10.10.136:1234/v1/chat/completions" `
+  -Method Post `
+  -ContentType "application/json" `
+  -Body (@{
+    messages = @(
+        @{ role = "system"; content = "You are a helpful IT Solutions Architect assistant." },
+        @{ role = "user"; content = "Is there a way to get a First Alert SC5 into Home Assistant?" }
+    )
+    temperature = 0.7
+  } | ConvertTo-Json)
+
+# This line pulls the text out of the object
+$response.choices.message.content
